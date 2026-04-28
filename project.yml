@@ -30,6 +30,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.ggsheng.DreamoraAiPro
         INFOPLIST_FILE: DreamoraAiPro/Info.plist
+        CODE_SIGN_ENTITLEMENTS: DreamoraAiPro/DreamoraAiPro.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         ENABLE_PREVIEWS: YES

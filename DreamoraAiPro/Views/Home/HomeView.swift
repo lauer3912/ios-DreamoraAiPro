@@ -53,6 +53,8 @@ struct HomeView: View {
                                     .foregroundColor(.white)
                             }
                         }
+                        .accessibilityLabel("Add new dream")
+                        .accessibilityHint("Double tap to open the add dream form")
                         .padding(.trailing, 24)
                         .padding(.bottom, 24)
                     }
@@ -145,6 +147,8 @@ struct StatCard: View {
         .padding()
         .background(Color.surface)
         .cornerRadius(16)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title): \(value)")
     }
 }
 

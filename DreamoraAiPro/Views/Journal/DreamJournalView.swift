@@ -63,6 +63,8 @@ struct DreamJournalView: View {
                                     .foregroundColor(.white)
                             }
                         }
+                        .accessibilityLabel("Add new dream")
+                        .accessibilityHint("Double tap to open the add dream form")
                         .padding(.trailing, 24)
                         .padding(.bottom, 24)
                     }

@@ -91,6 +91,7 @@ struct SettingsView: View {
                             }
                         }
                         .tint(.accentPrimary)
+                        .accessibilityLabel("Morning dream reminder toggle")
                         .listRowBackground(Color.surface)
 
                         Toggle(isOn: $settings.weeklyReport) {
@@ -101,6 +102,7 @@ struct SettingsView: View {
                             }
                         }
                         .tint(.accentPrimary)
+                        .accessibilityLabel("Weekly sleep report toggle")
                         .listRowBackground(Color.surface)
 
                         Toggle(isOn: $settings.motivationalTips) {
@@ -111,6 +113,7 @@ struct SettingsView: View {
                             }
                         }
                         .tint(.accentPrimary)
+                        .accessibilityLabel("Motivational tips toggle")
                         .listRowBackground(Color.surface)
                     }
 
