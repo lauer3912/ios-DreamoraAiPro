@@ -1,0 +1,95 @@
+name: DreamoraAiPro
+options:
+  bundleIdPrefix: com.ggsheng
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: "9L6N2ZF26B"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1"
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+    INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+
+targets:
+  DreamoraAiPro:
+    type: application
+    platform: iOS
+    sources:
+      - path: DreamoraAiPro
+        excludes:
+          - "**/*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ggsheng.DreamoraAiPro
+        INFOPLIST_FILE: DreamoraAiPro/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+        INFOPLIST_KEY_CFBundleDisplayName: DreamoraAiPro
+        GENERATE_INFOPLIST_FILE: NO
+    info:
+      path: DreamoraAiPro/Info.plist
+      properties:
+        CFBundleName: DreamoraAiPro
+        CFBundleDisplayName: DreamoraAiPro
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundlePackageType: APPL
+        CFBundleInfoDictionaryVersion: "6.0"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+        NSMicrophoneUsageDescription: "Dreamora needs microphone access to record voice notes for your dream entries."
+        NSHealthShareUsageDescription: "Dreamora can read your sleep data from Apple Health to show your sleep trends."
+        UIBackgroundModes:
+          - audio
+        LSRequiresIPhoneOS: true
+        UIRequiresFullScreen: true
+
+  DreamoraAiProTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: DreamoraAiProTests
+    dependencies:
+      - target: DreamoraAiPro
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ggsheng.DreamoraAiProTests
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+
+schemes:
+  DreamoraAiPro:
+    build:
+      targets:
+        DreamoraAiPro: all
+        DreamoraAiProTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - DreamoraAiProTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
