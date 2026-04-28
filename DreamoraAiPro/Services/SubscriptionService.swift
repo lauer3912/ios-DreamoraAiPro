@@ -71,7 +71,7 @@ class SubscriptionService: ObservableObject {
     private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         switch result {
         case .unverified:
-            throw StoreKitError.verificationFailure
+            throw NSError(domain: "StoreKit", code: -1, userInfo: [NSLocalizedDescriptionKey: "Verification failed"])
         case .verified(let safe):
             return safe
         }
