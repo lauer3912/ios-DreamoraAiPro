@@ -71,7 +71,7 @@ struct DreamJournalView: View {
             .navigationTitle("Dream Journal")
             .navigationBarTitleDisplayMode(.large)
             .searchable(text: $searchText, prompt: "Search dreams...")
-            .toolBarColorScheme(.dark, for: .navigationBar)
+            
             .sheet(isPresented: $showAddDream) {
                 AddDreamView()
             }

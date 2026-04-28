@@ -99,7 +99,7 @@ struct DreamDetailView: View {
         }
         .navigationTitle("Dream Details")
         .navigationBarTitleDisplayMode(.inline)
-        .toolBarColorScheme(.dark, for: .navigationBar)
+        
     }
 
     func analyzeDream() {

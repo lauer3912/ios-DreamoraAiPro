@@ -271,7 +271,7 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
-            .toolBarColorScheme(.dark, for: .navigationBar)
+            
         }
     }
 

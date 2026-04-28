@@ -90,7 +90,7 @@ struct PremiumView: View {
         }
         .navigationTitle("Premium")
         .navigationBarTitleDisplayMode(.inline)
-        .toolBarColorScheme(.dark, for: .navigationBar)
+        
     }
 
     func subscribe() {

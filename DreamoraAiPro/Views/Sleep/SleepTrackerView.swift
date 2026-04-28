@@ -61,7 +61,7 @@ struct SleepTrackerView: View {
             }
             .navigationTitle("Sleep Tracker")
             .navigationBarTitleDisplayMode(.large)
-            .toolBarColorScheme(.dark, for: .navigationBar)
+            
             .onAppear {
                 viewModel.loadData()
             }

@@ -60,7 +60,7 @@ struct HomeView: View {
             }
             .navigationTitle("Dreamora")
             .navigationBarTitleDisplayMode(.large)
-            .toolBarColorScheme(.dark, for: .navigationBar)
+            
             .sheet(isPresented: $showAddDream) {
                 AddDreamView()
             }
