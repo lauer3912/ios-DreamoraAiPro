@@ -62,7 +62,7 @@ struct DreamDetailView: View {
 
                     // AI Analysis Section
                     if let analysis = dream.analysisResult {
-                        AIAnalysisCard(analysis: analysis)
+                        DreamDetailAIAnalysisCard(analysis: analysis)
                             .onTapGesture {
                                 showAnalysis = true
                             }
@@ -171,7 +171,7 @@ struct AudioPlayerView: View {
     }
 }
 
-struct AIAnalysisCard: View {
+struct DreamDetailAIAnalysisCard: View {
     let analysis: AnalysisResult
 
     var body: some View {
