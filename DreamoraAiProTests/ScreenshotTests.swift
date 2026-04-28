@@ -2,11 +2,10 @@ import XCTest
 
 final class ScreenshotTests: XCTestCase {
 
-    var app: XCUIApplication!
+    var app = XCUIApplication()
 
     override func setUpWithError() throws {
         continueAfterFailure = false
-        app = XCUIApplication()
         app.launchArguments = ["--uitesting"]
         app.launch()
         Thread.sleep(forTimeInterval: 2.0)
@@ -14,6 +13,7 @@ final class ScreenshotTests: XCTestCase {
 
     override func tearDownWithError() throws {
         app.terminate()
+        app = XCUIApplication()
     }
 
     // MARK: - Screenshot Helper
